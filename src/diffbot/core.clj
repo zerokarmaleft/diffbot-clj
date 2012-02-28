@@ -1,10 +1,9 @@
 (ns diffbot.core
   (:require [clj-http.client :as client])
-  (:use clojure.contrib.pprint
-	clojure.contrib.str-utils
-	clojure.contrib.json))
+  (:use clojure.pprint
+	clojure.data.json))
 
-(def *base-url* "http://www.diffbot.com/api/")
+(def ^:dynamic *base-url* "http://www.diffbot.com/api/")
 
 (defn api-action [method path & [opts]]
   (client/request
