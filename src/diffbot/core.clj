@@ -14,7 +14,7 @@
 (defn read-dml [response]
   (xml/parse (input-stream (.getBytes response "UTF-8"))))
 
-(defn analyze [url token]
+(defn article [url token]
   (let [path (str "article?token=" token "&url=" url)]
     (read-json (:body (api-action :get path)))))
 

@@ -4,5 +4,5 @@ Diffbot client for clojure
 
 Usage:
 
-    (analyze "http://www.cnn.com" "*your token*")
+    (article "http://www.cnn.com" "*your token*")
 
